@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Student Management System</h1>
+
+    <div class="dashboard">
+        <div class = "card">
+            <h3>Total Students</h3>
+            <p>0</p>
+        </div>
+
+        <div class = "card">
+            <h3>Active Courses</h3>
+            <p>0</p>
+        </div>
+
+        <div class="card">
+            <h3>New Registrations</h3>
+            <p>0</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending Applications</h3>
+            <p>0</p>
+        </div>
+    </div>
+
+    <form id="studentForm">
+        <label for="name">Student Name</label>
+        <input type="text" id="name" placeholder="Enter student name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" required>
+
+        <label for="course">Course</label>
+        <input type="text" id="course" placeholder="Enter course" required>
+
+        <button type="submit">Add Student</button>  
+        <button type="button" id="cancelEdit">Cancel Edit</button>    
+    </form>
+
+    <h2>Student Records</h2>
+    <p id="studentCount">Total Students: 0</p>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by name or course...."
+    >
+
+    <select id="sortSelect">
+        <option value="default">Default</option>
+        <option value="name">Name</option>
+        <option value="course">Course</option>
+    </select>
+
+    <ul id="studentList">
+    </ul>
+
+    <div class = "pagination">
+        <button type ="button" id="prevBtn">Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button type="button" id="nextBtn">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
